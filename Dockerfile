@@ -11,9 +11,11 @@ RUN apk add --update --no-cache \
     curl \
     autoconf g++ make && \
     pecl install -f xdebug && \
+    postgresql-dev \
     docker-php-ext-enable xdebug
 
 RUN docker-php-ext-install opcache intl
+RUN docker-php-ext-install pdo pdo_pgsql
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer
 

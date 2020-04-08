@@ -9,9 +9,9 @@ RUN apk add --update --no-cache \
     bash \
     wget \
     curl \
+    postgresql-dev \
     autoconf g++ make && \
     pecl install -f xdebug && \
-    postgresql-dev \
     docker-php-ext-enable xdebug
 
 RUN docker-php-ext-install opcache intl

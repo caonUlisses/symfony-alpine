@@ -11,6 +11,7 @@ RUN apk add --update --no-cache \
     curl \
     postgresql-dev \
     autoconf g++ make && \
+    yarn \
     pecl install -f xdebug && \
     docker-php-ext-enable xdebug
 

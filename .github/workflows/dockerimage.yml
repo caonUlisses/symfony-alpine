@@ -19,7 +19,7 @@ jobs:
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     
     - name: Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:
         name: caonulisses/symfony-alpine
         username: ${{ secrets.DOCKER_USERNAME }}
